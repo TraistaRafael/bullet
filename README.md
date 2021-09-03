@@ -6,15 +6,13 @@ Supports both HashLink and JS output thanks to [WebIDL](https://github.com/ncann
 
 ## Compilation
 
-Download the Bullet sources and put them in hashlink/src/bullet directory.
-Then run `make gen_hl`
-Then open an compile `bullet.sln`
 
-Requires having hashlink one level upper than bullet directory, such as:
+run `make gen_hl`
+run `cmake .. -A x64 -G "Visual Studio 15 2017" -DBULLET_SRC_DIR="C:/Projects/RyanCleven/bullet3/src" -DHL_DIR="C:/HaxeToolkit/HashLink/hl-1.11.0-win"`
+open and build build/Project.sln
+copy build/Debug/bullet.hdll -> ../path/to/HashLink/...  Add this together with the other hdll files
 
-```
-/hashlink
-/libs
-   /bullet
-```
+navigate to /samples
 
+run `haxe compile.hxml`
+run `hl hello.hl`

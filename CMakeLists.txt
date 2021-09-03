@@ -1,5 +1,4 @@
 if(WIN32)
-    set(BULLET_SRC_DIR ${INCLUDES_BASE_DIR}/bullet/src)
 
     add_library(bullet.hdll SHARED
         ${BULLET_SRC_DIR}/Bullet3Common/b3AlignedAllocator.cpp
@@ -158,14 +157,25 @@ if(WIN32)
         ${BULLET_SRC_DIR}/LinearMath/btSerializer64.cpp
         ${BULLET_SRC_DIR}/LinearMath/btThreads.cpp
         ${BULLET_SRC_DIR}/LinearMath/btVector3.cpp
-        bullet.cpp
+        src/bullet.cpp
     )
 
-    set_as_hdll(bullet)
+    set_target_properties(bullet.hdll
+        PROPERTIES
+        PREFIX ""
+        OUTPUT_NAME bullet
+        SUFFIX .hdll
+    )
 
     target_include_directories(bullet.hdll
         PRIVATE
         ${BULLET_SRC_DIR}
+        ${HL_DIR}/include
+    )
+
+    target_link_directories(bullet.hdll
+        PRIVATE
+        ${HL_DIR}
     )
 
     target_link_libraries(bullet.hdll

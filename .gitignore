@@ -8,3 +8,6 @@ x64
 /src/bullet.cpp
 *.opendb
 *.user
+build/
+original_sample/
+sample/src/out/
