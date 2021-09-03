@@ -78,6 +78,8 @@ if(WIN32)
         ${BULLET_SRC_DIR}/BulletCollision/CollisionShapes/btTriangleMesh.cpp
         ${BULLET_SRC_DIR}/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp
         ${BULLET_SRC_DIR}/BulletCollision/CollisionShapes/btUniformScalingShape.cpp
+        ${BULLET_SRC_DIR}/BulletCollision/CollisionShapes/btMiniSDF.cpp
+        ${BULLET_SRC_DIR}/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp
         ${BULLET_SRC_DIR}/BulletCollision/Gimpact/btContactProcessing.cpp
         ${BULLET_SRC_DIR}/BulletCollision/Gimpact/btGenericPoolAllocator.cpp
         ${BULLET_SRC_DIR}/BulletCollision/Gimpact/btGImpactBvh.cpp
@@ -118,6 +120,8 @@ if(WIN32)
         ${BULLET_SRC_DIR}/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp
         ${BULLET_SRC_DIR}/BulletDynamics/ConstraintSolver/btTypedConstraint.cpp
         ${BULLET_SRC_DIR}/BulletDynamics/ConstraintSolver/btUniversalConstraint.cpp
+        ${BULLET_SRC_DIR}/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolverMt.cpp
+        ${BULLET_SRC_DIR}/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp
         ${BULLET_SRC_DIR}/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp
         ${BULLET_SRC_DIR}/BulletDynamics/Dynamics/btDiscreteDynamicsWorldMt.cpp
         ${BULLET_SRC_DIR}/BulletDynamics/Dynamics/btRigidBody.cpp
@@ -147,6 +151,7 @@ if(WIN32)
         ${BULLET_SRC_DIR}/BulletSoftBody/btSoftRigidCollisionAlgorithm.cpp
         ${BULLET_SRC_DIR}/BulletSoftBody/btSoftRigidDynamicsWorld.cpp
         ${BULLET_SRC_DIR}/BulletSoftBody/btSoftSoftCollisionAlgorithm.cpp
+        ${BULLET_SRC_DIR}/BulletSoftBody/poly34.cpp
         ${BULLET_SRC_DIR}/LinearMath/btAlignedAllocator.cpp
         ${BULLET_SRC_DIR}/LinearMath/btConvexHull.cpp
         ${BULLET_SRC_DIR}/LinearMath/btConvexHullComputer.cpp
@@ -157,6 +162,7 @@ if(WIN32)
         ${BULLET_SRC_DIR}/LinearMath/btSerializer64.cpp
         ${BULLET_SRC_DIR}/LinearMath/btThreads.cpp
         ${BULLET_SRC_DIR}/LinearMath/btVector3.cpp
+       
         src/bullet.cpp
     )
 
